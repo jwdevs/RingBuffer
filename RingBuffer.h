@@ -29,6 +29,10 @@ public:
     
     RingBuffer() {
     }
+
+    T& peek() {
+        return (*this)[0];
+    }
     
     T& operator[](R idx) {
         R index = (end + idx)%(capacity());
